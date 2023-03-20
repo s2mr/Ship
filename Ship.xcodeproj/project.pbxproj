@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25A862F429C82CA400CED066 /* APIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A862F329C82CA400CED066 /* APIKit.xcframework */; };
+		25A862F529C82CA400CED066 /* APIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25A862F329C82CA400CED066 /* APIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C755D5D0225C48DC005B0CEF /* Ship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C755D5C6225C48DB005B0CEF /* Ship.framework */; };
-		C755D5FB225C67B6005B0CEF /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C755D5F9225C67B6005B0CEF /* APIKit.framework */; };
 		C755D611225C6EAC005B0CEF /* RequestProxyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755D607225C6EAC005B0CEF /* RequestProxyMock.swift */; };
 		C755D612225C6EAC005B0CEF /* RequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755D608225C6EAC005B0CEF /* RequestMock.swift */; };
 		C755D613225C6EAC005B0CEF /* DependencyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755D609225C6EAC005B0CEF /* DependencyMock.swift */; };
@@ -41,6 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		25A862F629C82CA400CED066 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				25A862F529C82CA400CED066 /* APIKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7D0230A225CC4CB00B76B20 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25A862F329C82CA400CED066 /* APIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = APIKit.xcframework; path = Carthage/Build/APIKit.xcframework; sourceTree = "<group>"; };
 		C755D5C6225C48DB005B0CEF /* Ship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C755D5CF225C48DC005B0CEF /* ShipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C755D5D6225C48DC005B0CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C755D5FB225C67B6005B0CEF /* APIKit.framework in Frameworks */,
+				25A862F429C82CA400CED066 /* APIKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +162,7 @@
 		C755D5F7225C67B6005B0CEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25A862F329C82CA400CED066 /* APIKit.xcframework */,
 				C755D5F9225C67B6005B0CEF /* APIKit.framework */,
 			);
 			name = Frameworks;
@@ -207,6 +221,7 @@
 				C755D5C2225C48DB005B0CEF /* Sources */,
 				C755D5C3225C48DB005B0CEF /* Frameworks */,
 				C755D5C4225C48DB005B0CEF /* Resources */,
+				25A862F629C82CA400CED066 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,6 +485,7 @@
 				);
 				INFOPLIST_FILE = Ship/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +515,7 @@
 				);
 				INFOPLIST_FILE = Ship/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
