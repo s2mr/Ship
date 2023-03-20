@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "Ship", targets: ["Ship"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ishkawa/APIKit.git", .upToNextMinor(from: "5.0.0"))
+        .package(url: "https://github.com/ishkawa/APIKit.git", .upToNextMinor(from: "5.4.0"))
     ],
     targets: [
         .target(name: "Ship", dependencies: ["APIKit"], path: "Ship"),
